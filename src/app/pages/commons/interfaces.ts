@@ -25,7 +25,7 @@ export interface Elements {
     'background-color': string
   };
   media?: Media;
-  html: string;
+  html: {text: string};
 }
 
 export interface Layout {

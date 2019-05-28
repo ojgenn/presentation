@@ -6,12 +6,18 @@ import { AppComponent } from './app.component';
 import { HttpClientModule } from '@angular/common/http';
 import { PresentationCanvasComponent } from './pages/presentation-canvas/presentation-canvas.component';
 import { SlideComponent } from './pages/slide/slide.component';
+import { ShapeComponent } from './pages/shape/shape.component';
+import { TextComponent } from './pages/text/text.component';
+import { MediaComponent } from './pages/media/media.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     PresentationCanvasComponent,
-    SlideComponent
+    SlideComponent,
+    ShapeComponent,
+    TextComponent,
+    MediaComponent
   ],
   imports: [
     BrowserModule,

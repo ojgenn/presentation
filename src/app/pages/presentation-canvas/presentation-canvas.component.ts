@@ -5,7 +5,7 @@ function sleep(ms) {
   return new Promise(resolve => setTimeout(resolve, ms * 1000));
 }
 
-const DEFAULT_DELAY = 3;
+const DEFAULT_DELAY = 10;
 
 @Component({
   selector: 'app-presentation-canvas',
@@ -28,7 +28,7 @@ export class PresentationCanvasComponent {
       const length = slidesArray.length;
       for (let i = 0; length; i++) {
         this.slideElements = slidesArray[i].elements;
-        // const delay = slidesArray[i].delay || DEFAULT_DELAY;
+        const delay = slidesArray[i].delay || DEFAULT_DELAY;
         if (i >= length - 1) {
           i = -1;
         }

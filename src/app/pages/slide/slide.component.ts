@@ -1,5 +1,6 @@
 import { Component, Input } from '@angular/core';
 import { Elements } from '../commons/interfaces';
+import { ElementTypes } from '../commons/enums';
 
 @Component({
   selector: 'app-slide',
@@ -8,9 +9,7 @@ import { Elements } from '../commons/interfaces';
 })
 export class SlideComponent {
 
-  @Input() set slideElements(slideElements: Array<Elements>) {
-    console.log(slideElements);
-  }
-  constructor() { }
+  @Input() slideElements: Array<Elements>;
+  elementTypes = ElementTypes;
 
 }

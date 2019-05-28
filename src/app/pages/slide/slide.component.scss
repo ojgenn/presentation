@@ -1,0 +1,24 @@
+.slide {
+  display: block;
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+
+app-shape {
+  display: block;
+  position: absolute;
+  border: 1px solid lightgrey;
+}
+
+app-media {
+  display: block;
+  position: absolute;
+  border: 1px solid lightgrey;
+}
+
+app-text {
+  display: block;
+  position: absolute;
+  border: 1px solid lightgrey;
+}

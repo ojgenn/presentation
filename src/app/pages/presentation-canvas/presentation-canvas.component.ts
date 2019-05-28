@@ -32,7 +32,7 @@ export class PresentationCanvasComponent {
         if (i >= length - 1) {
           i = -1;
         }
-        await sleep(DEFAULT_DELAY);
+        await sleep(delay);
       }
     }
   }

@@ -1,3 +1,18 @@
-<p>
-  media works!
-</p>
+<div #mediaBlock>
+  <ng-container [ngSwitch]="type">
+    <ng-container *ngSwitchCase="'image'">
+
+      <!-- растянуть рисунок в размеры блока-->
+      <img [src]="'https://cdn.snap.menu/version/' + token + '.' + ext" alt="someImg">
+    </ng-container>
+    <ng-container *ngSwitchCase="'video'">
+      <!--      вычислить размеры блока размеры блока и в видео прокинуть. не успел сделать правильно -->
+      <video [width]="mediaBlock.nativeElement.width" [height]="mediaBlock.nativeElement.height" controls="controls">
+        <source [src]="'https://cdn.snap.menu/version/' + token + '.' + ext" [type]="mime">
+      </video>
+    </ng-container>
+    <ng-container *ngSwitchCase="'audio'">
+      audio
+    </ng-container>
+  </ng-container>
+</div>

@@ -1,7 +1,7 @@
 <div class="slide">
   <ng-container [ngSwitch]="element.type" *ngFor="let element of slideElements">
     <ng-container *ngSwitchCase="elementTypes.Media">
-      <app-media [ngStyle]="{'top': element.layout.top + '%',  'left': element.layout.left + '%', 'right': element.layout.right + '%', 'bottom': element.layout.bottom + '%'}"></app-media>
+      <app-media [media]="element.media" [ngStyle]="{'top': element.layout.top + '%',  'left': element.layout.left + '%', 'right': element.layout.right + '%', 'bottom': element.layout.bottom + '%'}"></app-media>
     </ng-container>
     <ng-container *ngSwitchCase="elementTypes.Shape">
       <app-shape [ngStyle]="{'top': element.layout.top + '%',  'left': element.layout.left + '%', 'right': element.layout.right + '%', 'bottom': element.layout.bottom + '%', 'background-color': element.style['background-color']}"></app-shape>

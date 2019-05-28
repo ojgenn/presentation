@@ -1,9 +1,11 @@
 import { Component, Input } from '@angular/core';
-import { Canvas, Slides } from '../commons/interfaces';
+import { Canvas, Elements, Slides } from '../commons/interfaces';
 
 function sleep(ms) {
-  return new Promise(resolve => setTimeout(resolve, ms));
+  return new Promise(resolve => setTimeout(resolve, ms * 1000));
 }
+
+const DEFAULT_DELAY = 3;
 
 @Component({
   selector: 'app-presentation-canvas',
@@ -19,16 +21,18 @@ export class PresentationCanvasComponent {
     this.slide(slides).catch();
   }
 
+  slideElements: Array<Elements>;
+
   async slide(slidesArray: Array<Slides>) {
-    console.log(slidesArray);
     if (slidesArray && slidesArray.length > 0) {
       const length = slidesArray.length;
       for (let i = 0; length; i++) {
-        console.log(slidesArray[i]);
+        this.slideElements = slidesArray[i].elements;
+        // const delay = slidesArray[i].delay || DEFAULT_DELAY;
         if (i >= length - 1) {
           i = -1;
         }
-        await sleep(5000);
+        await sleep(DEFAULT_DELAY);
       }
     }
   }
